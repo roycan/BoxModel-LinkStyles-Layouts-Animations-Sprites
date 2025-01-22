@@ -63,6 +63,7 @@
     position: relative;
     text-decoration: none;
     color: var(--bs-primary);
+    padding-bottom: 2px;  /* Added padding to create space for underline */
 }
 
 .animated-underline::after {
@@ -70,10 +71,11 @@
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -2px;
+    bottom: 0;
     left: 0;
     background-color: var(--bs-primary);
     transition: width 0.3s ease-in-out;
+    opacity: 0.8;  /* Added opacity for better visibility */
 }
 
 .animated-underline:hover::after {
