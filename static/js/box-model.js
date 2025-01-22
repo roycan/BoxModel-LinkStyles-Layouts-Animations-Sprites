@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const paddingValue = paddingRange.value;
         const borderValue = borderRange.value;
 
-        // Update visualization
-        document.querySelector('.margin-box').style.padding = `${marginValue}px`;
-        document.querySelector('.padding-box').style.padding = `${paddingValue}px`;
-        document.querySelector('.border-box').style.borderWidth = `${borderValue}px`;
+        // Update visualization - make selectors more specific to target box model demo
+        document.querySelector('#box-model-demo .margin-box').style.padding = `${marginValue}px`;
+        document.querySelector('#box-model-demo .padding-box').style.padding = `${paddingValue}px`;
+        document.querySelector('#box-model-demo .border-box').style.borderWidth = `${borderValue}px`;
 
         // Update code preview
         codePreview.textContent = `.example-element {

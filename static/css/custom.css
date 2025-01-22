@@ -30,13 +30,13 @@
     max-width: 400px;
 }
 
-.margin-box {
+#box-model-demo .margin-box {
     background-color: var(--bs-warning-bg-subtle);
     padding: 20px;
     transition: padding 0.3s;
 }
 
-.border-box {
+#box-model-demo .border-box {
     background-color: var(--bs-primary);
     border-style: solid;
     border-color: var(--bs-primary);
@@ -44,16 +44,32 @@
     transition: border-width 0.3s;
 }
 
-.padding-box {
+#box-model-demo .padding-box {
     background-color: var(--bs-info-bg-subtle);
     padding: 20px;
     transition: padding 0.3s;
 }
 
-.content-box {
+#box-model-demo .content-box {
     background-color: var(--bs-body-bg);
     padding: 20px;
     text-align: center;
+}
+
+/* Box Sizing Demo Styles */
+.demo-box {
+    background-color: var(--bs-dark-bg-subtle);
+    border-style: solid;
+    border-color: var(--bs-primary);
+    position: relative;
+}
+
+.demo-box.content-box {
+    box-sizing: content-box;
+}
+
+.demo-box.border-box {
+    box-sizing: border-box;
 }
 
 /* Code Preview */
@@ -87,7 +103,7 @@
     position: relative;
     text-decoration: none;
     color: var(--bs-primary);
-    padding-bottom: 2px;  /* Added padding to create space for underline */
+    padding-bottom: 2px;
 }
 
 .animated-underline::after {
@@ -99,7 +115,7 @@
     left: 0;
     background-color: var(--bs-primary);
     transition: width 0.3s ease-in-out;
-    opacity: 0.8;  /* Added opacity for better visibility */
+    opacity: 0.8;
 }
 
 .animated-underline:hover::after {
@@ -192,21 +208,6 @@
 /* Box Sizing Demo */
 .box-sizing-demo {
     padding: 20px;
-}
-
-.demo-box {
-    background-color: var(--bs-dark-bg-subtle);
-    border-style: solid;
-    border-color: var(--bs-primary);
-    position: relative;
-}
-
-.demo-box.content-box {
-    box-sizing: content-box;
-}
-
-.demo-box.border-box {
-    box-sizing: border-box;
 }
 
 .dimensions-display {
