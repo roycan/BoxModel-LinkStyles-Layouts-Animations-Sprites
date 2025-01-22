@@ -3,6 +3,28 @@
     padding: 20px;
 }
 
+/* Navbar Customization */
+.navbar {
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.navbar .nav-link {
+    color: var(--bs-light) !important;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+    opacity: 1;
+}
+
+.navbar-brand {
+    color: var(--bs-light) !important;
+    font-weight: 600;
+}
+
+/* Box Model Styles */
 .box-model-visualization {
     margin: 20px auto;
     max-width: 400px;
