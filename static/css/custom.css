@@ -278,8 +278,9 @@
     color: var(--bs-light);
     border-radius: 0.375rem;
     transition: all 0.3s ease;
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 1.5rem; /* Increased font size for better visibility */
+    font-weight: 600; /* Made text bolder */
+    padding: 2rem !important; /* More padding for better visibility */
 }
 
 /* Property-specific styles */

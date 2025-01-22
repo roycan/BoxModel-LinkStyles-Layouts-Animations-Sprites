@@ -40,10 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: 'blur', type: 'range', min: 0, max: 20, value: 3, unit: 'px' }
             ],
             apply: (values) => {
-                const shadow = `${values['x-offset']}px ${values['y-offset']}px ${values.blur}px rgba(var(--bs-primary-rgb), 0.5)`;
+                // Use a darker shadow color for better visibility
+                const shadow = `${values['x-offset']}px ${values['y-offset']}px ${values.blur}px rgba(0, 0, 0, 0.7)`;
                 return {
-                    style: { 'text-shadow': shadow },
-                    code: `text-shadow: ${shadow};`
+                    style: { 
+                        'text-shadow': shadow,
+                        'color': 'var(--bs-light)' // Ensure text is light colored
+                    },
+                    code: `color: var(--bs-light);\ntext-shadow: ${shadow};`
                 };
             }
         },
@@ -120,15 +124,16 @@ document.addEventListener('DOMContentLoaded', function() {
             values[control.name] = parseFloat(input.value);
         });
 
-        // Apply the property
-        const result = currentProperty.apply(values);
-
         // Reset all properties first
         previewElement.style.transform = 'none';
         previewElement.style.boxShadow = 'none';
         previewElement.style.textShadow = 'none';
         previewElement.style.borderRadius = '0';
         previewElement.style.opacity = '1';
+        previewElement.style.color = 'var(--bs-light)'; // Reset text color
+
+        // Apply the property
+        const result = currentProperty.apply(values);
 
         // Update the preview element with new property
         Object.entries(result.style).forEach(([property, value]) => {
