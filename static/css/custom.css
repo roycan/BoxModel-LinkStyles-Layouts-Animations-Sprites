@@ -186,3 +186,30 @@
         min-height: 300px;
     }
 }
+
+/* Box Sizing Demo */
+.box-sizing-demo {
+    padding: 20px;
+}
+
+.demo-box {
+    background-color: var(--bs-dark-bg-subtle);
+    border-style: solid;
+    border-color: var(--bs-primary);
+    position: relative;
+}
+
+.demo-box.content-box {
+    box-sizing: content-box;
+}
+
+.demo-box.border-box {
+    box-sizing: border-box;
+}
+
+.dimensions-display {
+    font-size: 0.875rem;
+    color: var(--bs-secondary-color);
+    text-align: center;
+    margin-top: 0.5rem;
+}
