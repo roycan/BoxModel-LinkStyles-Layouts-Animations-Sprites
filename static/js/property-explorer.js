@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const properties = {
         'border-radius': {
             controls: [
-                { name: 'radius', type: 'range', min: 0, max: 50, value: 8, unit: 'px' }
+                { name: 'radius', type: 'range', min: 0, max: 75, value: 8, unit: 'px' }
             ],
             apply: (values) => {
                 const radius = `${values.radius}px`;
@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 {
                     title: "Perfect Circle Challenge",
                     description: "Make the element a perfect circle by setting the right border radius",
-                    goal: 50,
-                    check: (values) => Math.abs(values.radius - 50) < 2,
-                    hint: "For a square element, setting border-radius to 50% or 50px makes it circular"
+                    goal: 75,
+                    check: (values) => Math.abs(values.radius - 75) < 2,
+                    hint: "For a square element, setting border-radius to 75px (half of width/height) makes it circular"
                 }
             ]
         },
