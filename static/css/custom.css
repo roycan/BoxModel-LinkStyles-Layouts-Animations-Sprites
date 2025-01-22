@@ -38,8 +38,10 @@
 
 .border-box {
     background-color: var(--bs-primary);
-    padding: 5px;
-    transition: padding 0.3s;
+    border-style: solid;
+    border-color: var(--bs-primary);
+    border-width: 5px;
+    transition: border-width 0.3s;
 }
 
 .padding-box {

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update visualization
         document.querySelector('.margin-box').style.padding = `${marginValue}px`;
         document.querySelector('.padding-box').style.padding = `${paddingValue}px`;
-        document.querySelector('.border-box').style.padding = `${borderValue}px`;
+        document.querySelector('.border-box').style.borderWidth = `${borderValue}px`;
 
         // Update code preview
         codePreview.textContent = `.example-element {
