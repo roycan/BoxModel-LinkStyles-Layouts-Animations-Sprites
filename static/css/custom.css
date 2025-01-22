@@ -63,7 +63,6 @@
 .animated-underline {
     position: relative;
     text-decoration: none;
-    padding-bottom: 2px;
 }
 
 .animated-underline::after {
