@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Exercise</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <style>
+        /* Your CSS goes here */
+        .flex-container {
+            /* Make this a flex container
+            - Add appropriate flex properties to center items
+            - Set gap between items
+            */
+            min-height: 300px;
+            background-color: var(--bs-dark-bg-subtle);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .flex-item {
+            background-color: var(--bs-primary);
+            color: var(--bs-light);
+            padding: 1rem;
+            border-radius: 4px;
+            /* Add size properties */
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1>Flexbox Exercise</h1>
+        
+        <div class="alert alert-info">
+            <h4>Instructions:</h4>
+            <ol>
+                <li>Create a flex container</li>
+                <li>Add 4 flex items</li>
+                <li>Center the items both horizontally and vertically</li>
+                <li>Add 1rem gap between items</li>
+                <li>Make the container responsive</li>
+            </ol>
+        </div>
+
+        <div class="flex-container">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+        </div>
+    </div>
+</body>
+</html>

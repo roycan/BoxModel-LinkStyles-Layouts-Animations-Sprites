@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Exercise</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <style>
+        /* Your CSS goes here */
+        .box {
+            /* Add properties to create a box with:
+            - 200px width
+            - 20px padding
+            - 5px solid border
+            - 30px margin
+            */
+        }
+
+        .content-box {
+            /* Use content-box sizing */
+        }
+
+        .border-box {
+            /* Use border-box sizing */
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1>Box Model Exercise</h1>
+        
+        <div class="alert alert-info">
+            <h4>Instructions:</h4>
+            <ol>
+                <li>Create two boxes with the same width, padding, border, and margin</li>
+                <li>Make one box use content-box sizing</li>
+                <li>Make the other box use border-box sizing</li>
+                <li>Observe and document the differences in final dimensions</li>
+            </ol>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Box 1 (content-box)</h3>
+                <div class="box content-box">
+                    Content Box
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Box 2 (border-box)</h3>
+                <div class="box border-box">
+                    Border Box
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

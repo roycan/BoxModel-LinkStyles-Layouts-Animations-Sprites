@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Exercise</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <style>
+        /* Your CSS goes here */
+        .grid-container {
+            /* Create a grid with:
+            - 3 equal columns
+            - 20px gap between items
+            - Responsive design that changes to 2 columns on medium screens
+            and 1 column on small screens
+            */
+            background-color: var(--bs-dark-bg-subtle);
+            border-radius: 8px;
+            padding: 1rem;
+            min-height: 300px;
+        }
+
+        .grid-item {
+            background-color: var(--bs-primary);
+            color: var(--bs-light);
+            padding: 1rem;
+            border-radius: 4px;
+            /* Add size properties */
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1>Grid Exercise</h1>
+        
+        <div class="alert alert-info">
+            <h4>Instructions:</h4>
+            <ol>
+                <li>Create a grid container with 3 equal columns</li>
+                <li>Add 6 grid items</li>
+                <li>Set 20px gap between items</li>
+                <li>Make the grid responsive:
+                    <ul>
+                        <li>3 columns on large screens (>992px)</li>
+                        <li>2 columns on medium screens (>768px)</li>
+                        <li>1 column on small screens</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+    </div>
+</body>
+</html>
