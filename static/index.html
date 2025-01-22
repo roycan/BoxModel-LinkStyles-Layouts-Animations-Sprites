@@ -427,6 +427,53 @@
             </div>
         </section>
 
+        <!-- CSS Property Explorer Section -->
+        <section id="property-explorer" class="mb-5">
+            <h2 class="mb-4">CSS Property Explorer</h2>
+            <div class="alert alert-info mb-4">
+                <h5>Interactive CSS Properties</h5>
+                <p>Experiment with different CSS properties and see their effects in real-time. Select properties, adjust their values, and watch both the element and code update instantly!</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Property Controls</h5>
+                            <div class="property-controls mb-3">
+                                <label class="form-label">Select Property:</label>
+                                <select class="form-select mb-3" id="property-type">
+                                    <option value="border-radius">Border Radius</option>
+                                    <option value="box-shadow">Box Shadow</option>
+                                    <option value="text-shadow">Text Shadow</option>
+                                    <option value="transform">Transform</option>
+                                    <option value="opacity">Opacity</option>
+                                </select>
+
+                                <!-- Dynamic Controls Container -->
+                                <div id="property-controls">
+                                    <!-- Controls will be dynamically added here -->
+                                </div>
+                            </div>
+                            <div class="preview-area p-4 d-flex align-items-center justify-content-center">
+                                <div id="preview-element" class="p-4">
+                                    Preview Element
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Live CSS</h5>
+                            <pre class="code-preview" id="property-code">
+/* CSS code will appear here */</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Exercises Section -->
         <section id="exercises" class="mb-5">
             <h2 class="mb-4">Practice Exercises</h2>
@@ -511,5 +558,6 @@
     <script src="/static/js/link-styles.js"></script>
     <script src="/static/js/layout-demo.js"></script>
     <script src="/static/js/animation-demo.js"></script>
+    <script src="/static/js/property-explorer.js"></script>
 </body>
 </html>

@@ -265,3 +265,24 @@
     50% { background-color: var(--bs-info); }
     100% { background-color: var(--bs-primary); }
 }
+
+/* Property Explorer Styles */
+.preview-area {
+    background-color: var(--bs-dark-bg-subtle);
+    min-height: 200px;
+    border-radius: 0.375rem;
+}
+
+#preview-element {
+    background-color: var(--bs-primary);
+    color: var(--bs-light);
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* Property-specific styles */
+.has-shadow {
+    background-color: var(--bs-dark);
+}
