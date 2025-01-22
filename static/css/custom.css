@@ -27,10 +27,9 @@
 }
 
 .content-box {
-    background-color: var(--bs-light);
+    background-color: var(--bs-body-bg);
     padding: 20px;
     text-align: center;
-    border: 1px solid var(--bs-border-color);
 }
 
 /* Code Preview */
@@ -63,6 +62,8 @@
 .animated-underline {
     position: relative;
     text-decoration: none;
+    color: var(--bs-primary);
+    padding-bottom: 2px;  /* Added padding to create space for underline */
 }
 
 .animated-underline::after {
@@ -72,9 +73,9 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: currentColor;
+    background-color: var(--bs-primary);
     transition: width 0.3s ease-in-out;
-    opacity: 0.8;
+    opacity: 0.8;  /* Added opacity for better visibility */
 }
 
 .animated-underline:hover::after {
@@ -104,10 +105,16 @@
     transform: translateX(5px);
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .box-model-visualization {
+        max-width: 100%;
+    }
+}
+
 /* Flexbox Demo */
 .flexbox-demo {
-    background-color: var(--bs-light-bg-subtle);
-    border: 1px solid var(--bs-border-color);
+    background-color: var(--bs-dark-bg-subtle);
     min-height: 200px;
     padding: 1rem;
     display: flex;
@@ -130,8 +137,7 @@
 
 /* Grid Demo */
 .grid-demo {
-    background-color: var(--bs-light-bg-subtle);
-    border: 1px solid var(--bs-border-color);
+    background-color: var(--bs-dark-bg-subtle);
     padding: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -151,11 +157,8 @@
     min-height: 60px;
 }
 
-/* Mobile Responsiveness */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .box-model-visualization {
-        max-width: 100%;
-    }
     .flexbox-demo,
     .grid-demo {
         min-height: 300px;
