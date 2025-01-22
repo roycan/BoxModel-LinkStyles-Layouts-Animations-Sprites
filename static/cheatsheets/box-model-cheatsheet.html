@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model & Box Sizing Cheat Sheet</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <style>
+        .box-example {
+            background-color: var(--bs-dark-bg-subtle);
+            border: 2px solid var(--bs-primary);
+            padding: 15px;
+            margin: 15px;
+            border-radius: 4px;
+        }
+
+        .content-box-example, .border-box-example {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid var(--bs-primary);
+            margin: 20px;
+            background-color: var(--bs-dark-bg-subtle);
+        }
+
+        .content-box-example {
+            box-sizing: content-box;
+        }
+
+        .border-box-example {
+            box-sizing: border-box;
+        }
+
+        pre {
+            background-color: var(--bs-dark);
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .property-table {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .property-table th, .property-table td {
+            padding: 0.5rem;
+            border: 1px solid var(--bs-border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <h1>CSS Box Model & Box Sizing Cheat Sheet</h1>
+        
+        <section class="mb-5">
+            <h2>Box Model Components</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="property-table">
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>content</td>
+                            <td>The actual content (text, images)</td>
+                        </tr>
+                        <tr>
+                            <td>padding</td>
+                            <td>Space between content and border</td>
+                        </tr>
+                        <tr>
+                            <td>border</td>
+                            <td>Border around the padding</td>
+                        </tr>
+                        <tr>
+                            <td>margin</td>
+                            <td>Space outside the border</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <div class="box-example">
+                        Example Box
+                    </div>
+                    <pre>
+.box {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 2px solid;
+    margin: 10px;
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Box Sizing</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>content-box (default)</h3>
+                    <div class="content-box-example">
+                        Content Box
+                    </div>
+                    <p>Total width = width + padding + border</p>
+                    <pre>
+.content-box {
+    box-sizing: content-box;
+    width: 200px;  /* Final width: 250px */
+    padding: 20px;
+    border: 5px solid;
+}</pre>
+                </div>
+                <div class="col-md-6">
+                    <h3>border-box</h3>
+                    <div class="border-box-example">
+                        Border Box
+                    </div>
+                    <p>Total width = width (includes padding & border)</p>
+                    <pre>
+.border-box {
+    box-sizing: border-box;
+    width: 200px;  /* Final width: 200px */
+    padding: 20px;
+    border: 5px solid;
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common Properties</h2>
+            <table class="property-table">
+                <tr>
+                    <th>Property</th>
+                    <th>Values</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>padding</td>
+                    <td>px, em, rem, %</td>
+                    <td>padding: 10px; or padding: 10px 20px;</td>
+                </tr>
+                <tr>
+                    <td>margin</td>
+                    <td>px, em, rem, %, auto</td>
+                    <td>margin: auto; or margin: 10px 20px;</td>
+                </tr>
+                <tr>
+                    <td>border</td>
+                    <td>width style color</td>
+                    <td>border: 1px solid black;</td>
+                </tr>
+                <tr>
+                    <td>box-sizing</td>
+                    <td>content-box, border-box</td>
+                    <td>Defines how width and height are calculated</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

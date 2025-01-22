@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Cheat Sheet</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <style>
+        .flex-example {
+            background-color: var(--bs-dark-bg-subtle);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            min-height: 100px;
+            display: flex;
+        }
+
+        .flex-item {
+            background-color: var(--bs-primary);
+            color: var(--bs-light);
+            padding: 1rem;
+            margin: 0.25rem;
+            border-radius: 4px;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        pre {
+            background-color: var(--bs-dark);
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .property-table {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .property-table th, .property-table td {
+            padding: 0.5rem;
+            border: 1px solid var(--bs-border-color);
+        }
+
+        /* Example specific styles */
+        .justify-content-example { justify-content: space-between; }
+        .align-items-example { align-items: center; height: 150px; }
+        .flex-direction-example { flex-direction: column; }
+        .flex-wrap-example { flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <h1>CSS Flexbox Cheat Sheet</h1>
+
+        <section class="mb-5">
+            <h2>Flex Container Properties</h2>
+            
+            <h3>display: flex;</h3>
+            <div class="flex-example">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+            <pre>
+.container {
+    display: flex;
+}</pre>
+
+            <h3>justify-content</h3>
+            <div class="flex-example justify-content-example">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+            <pre>
+.container {
+    justify-content: space-between;
+    /* Other values: flex-start, flex-end, center, 
+       space-around, space-evenly */
+}</pre>
+
+            <h3>align-items</h3>
+            <div class="flex-example align-items-example">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+            <pre>
+.container {
+    align-items: center;
+    /* Other values: flex-start, flex-end, 
+       stretch, baseline */
+}</pre>
+
+            <h3>flex-direction</h3>
+            <div class="flex-example flex-direction-example">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+            <pre>
+.container {
+    flex-direction: column;
+    /* Other values: row, row-reverse, 
+       column-reverse */
+}</pre>
+
+            <h3>flex-wrap</h3>
+            <div class="flex-example flex-wrap-example">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+                <div class="flex-item">5</div>
+                <div class="flex-item">6</div>
+            </div>
+            <pre>
+.container {
+    flex-wrap: wrap;
+    /* Other values: nowrap, wrap-reverse */
+}</pre>
+        </section>
+
+        <section>
+            <h2>Flex Item Properties</h2>
+            <table class="property-table">
+                <tr>
+                    <th>Property</th>
+                    <th>Values</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>flex-grow</td>
+                    <td>number (default: 0)</td>
+                    <td>How much item grows relative to siblings</td>
+                </tr>
+                <tr>
+                    <td>flex-shrink</td>
+                    <td>number (default: 1)</td>
+                    <td>How much item shrinks relative to siblings</td>
+                </tr>
+                <tr>
+                    <td>flex-basis</td>
+                    <td>length, auto</td>
+                    <td>Initial main size of flex item</td>
+                </tr>
+                <tr>
+                    <td>flex</td>
+                    <td>grow shrink basis</td>
+                    <td>Shorthand for grow, shrink, and basis</td>
+                </tr>
+                <tr>
+                    <td>align-self</td>
+                    <td>auto, flex-start, center...</td>
+                    <td>Override align-items for specific item</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
