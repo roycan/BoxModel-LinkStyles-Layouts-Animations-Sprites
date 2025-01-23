@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         borderBox.style.borderWidth = `${border}px`;
         
         // Calculate and display total dimensions
-        const contentBoxTotal = width + (padding * 2) + (border * 2);
+        const contentBoxTotal = Number(width) + Number(padding * 2) + Number(border * 2);
         document.querySelector('.content-box-size').textContent = 
             `Total width: ${contentBoxTotal}px (content: ${width}px + padding: ${padding * 2}px + border: ${border * 2}px)`;
         

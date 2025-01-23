@@ -125,7 +125,7 @@
 /* Color Transition */
 .color-transition {
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .color-transition:hover {
@@ -138,7 +138,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .icon-link:hover {
