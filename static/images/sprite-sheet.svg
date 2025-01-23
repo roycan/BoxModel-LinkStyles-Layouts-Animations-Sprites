@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="192" height="128" viewBox="0 0 192 128">
     <!-- Home Icon Normal -->
     <g transform="translate(0,0)">
-        <path d="M32 16 L56 4 L80 16 L80 56 L56 56 L56 36 L32 36 Z" fill="var(--bs-secondary-color)" stroke="none"/>
+        <path d="M32 16 L56 4 L80 16 L80 56 L56 56 L56 36 L32 36 Z" fill="var(--bs-secondary)" stroke="var(--bs-dark)" stroke-width="1"/>
     </g>
     <!-- Home Icon Hover -->
     <g transform="translate(0,64)">
@@ -10,8 +10,8 @@
 
     <!-- Email Icon Normal -->
     <g transform="translate(64,0)">
-        <rect x="32" y="20" width="48" height="32" rx="4" fill="var(--bs-secondary-color)"/>
-        <path d="M32 20 L56 36 L80 20" fill="none" stroke="var(--bs-dark)" stroke-width="2"/>
+        <rect x="32" y="20" width="48" height="32" rx="4" fill="var(--bs-secondary)"/>
+        <path d="M32 20 L56 36 L80 20" fill="none" stroke="var(--bs-dark)" stroke-width="1"/>
     </g>
     <!-- Email Icon Hover -->
     <g transform="translate(64,64)">
@@ -21,7 +21,7 @@
 
     <!-- Settings Icon Normal -->
     <g transform="translate(128,0)">
-        <circle cx="56" cy="32" r="16" fill="var(--bs-secondary-color)"/>
+        <circle cx="56" cy="32" r="16" fill="var(--bs-secondary)"/>
         <circle cx="56" cy="32" r="6" fill="var(--bs-dark)"/>
     </g>
     <!-- Settings Icon Hover -->
