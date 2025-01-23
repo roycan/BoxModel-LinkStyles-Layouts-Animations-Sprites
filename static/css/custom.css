@@ -366,17 +366,3 @@
   background-color: var(--bs-success);
   border-color: var(--bs-success);
 }
-
-/* Interactive Sprite Preview */
-.sprite-preview {
-  display: inline-block;
-  margin: 1rem;
-  text-align: center;
-}
-
-.sprite-preview-label {
-  display: block;
-  margin-top: 0.5rem;
-  color: var(--bs-light);
-  font-size: 0.875rem;
-}
