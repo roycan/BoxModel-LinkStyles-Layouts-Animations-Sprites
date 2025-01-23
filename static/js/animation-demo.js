@@ -11,44 +11,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const duration = animationDuration.value;
         const timing = timingFunction.value;
 
-        // Remove any existing animation and classes
+        // Remove any existing animation
         animatedElement.style.animation = 'none';
-        animatedElement.classList.remove('color-animation');
         // Trigger reflow
         void animatedElement.offsetWidth;
 
-        // Set CSS variables for animation properties
-        animatedElement.style.setProperty('--animation-duration', `${duration}s`);
-        animatedElement.style.setProperty('--animation-timing', timing);
-
         // Apply new animation
-        if (type === 'color') {
-            animatedElement.classList.add('color-animation');
-        } else {
-            const animationCSS = `${type} ${duration}s ${timing} infinite`;
-            animatedElement.style.animation = animationCSS;
-        }
+        const animationCSS = `${type} ${duration}s ${timing} infinite`;
+        animatedElement.style.animation = animationCSS;
 
         // Update code preview
-        if (type === 'color') {
-            animationCode.textContent = `.animated-element {
-    animation: color-change ${duration}s ${timing} infinite;
-}
-
-@keyframes color-change {
-    0% { background-color: var(--bs-primary); }
-    50% { background-color: var(--bs-info); }
-    100% { background-color: var(--bs-primary); }
-}`;
-        } else {
-            animationCode.textContent = `.animated-element {
+        animationCode.textContent = `.animated-element {
     animation: ${type} ${duration}s ${timing} infinite;
 }
 
 @keyframes ${type} {
 ${getKeyframesCode(type)}
 }`;
-        }
     }
 
     function getKeyframesCode(type) {
