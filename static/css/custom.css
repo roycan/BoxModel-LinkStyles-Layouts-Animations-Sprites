@@ -296,3 +296,41 @@
 .has-shadow {
     background-color: var(--bs-dark);
 }
+
+/* Image Sprites Styles */
+.sprite-demo-container {
+    padding: 2rem;
+    background-color: var(--bs-dark-bg-subtle);
+    border-radius: 0.375rem;
+    text-align: center;
+}
+
+.sprite {
+    width: 64px;
+    height: 64px;
+    background-image: url('/static/images/sprite-sheet.svg');
+    background-repeat: no-repeat;
+    transition: background-position 0.3s ease;
+    cursor: pointer;
+}
+
+.home-icon {
+    background-position: 0 0;
+}
+.home-icon:hover {
+    background-position: 0 -64px;
+}
+
+.email-icon {
+    background-position: -64px 0;
+}
+.email-icon:hover {
+    background-position: -64px -64px;
+}
+
+.settings-icon {
+    background-position: -128px 0;
+}
+.settings-icon:hover {
+    background-position: -128px -64px;
+}

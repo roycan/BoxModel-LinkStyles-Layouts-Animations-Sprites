@@ -500,6 +500,77 @@
             </div>
         </section>
 
+        <!-- Image Sprites Section -->
+        <section id="image-sprites" class="mb-5">
+            <h2 class="mb-4">Image Sprites</h2>
+            <div class="alert alert-info mb-4">
+                <h5>Understanding Image Sprites</h5>
+                <p>Image sprites are a technique where multiple images are combined into a single image file. This approach:</p>
+                <ul>
+                    <li><strong>Reduces HTTP Requests:</strong> Fewer server requests means faster page loads</li>
+                    <li><strong>Saves Bandwidth:</strong> One optimized image instead of multiple separate files</li>
+                    <li><strong>Improves User Experience:</strong> Instant hover states with no image loading</li>
+                </ul>
+                <p>Try hovering over the icons below to see image sprites in action!</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Interactive Sprite Demo</h5>
+                            <div class="sprite-demo-container mb-3">
+                                <div class="sprite-icons d-flex gap-4 justify-content-center">
+                                    <div class="sprite home-icon" title="Home"></div>
+                                    <div class="sprite email-icon" title="Email"></div>
+                                    <div class="sprite settings-icon" title="Settings"></div>
+                                </div>
+                            </div>
+                            <div class="alert alert-light">
+                                <strong>Try it!</strong> Hover over each icon to see the sprite animation in action.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">CSS Implementation</h5>
+                            <pre class="code-preview">
+.sprite {
+    width: 64px;
+    height: 64px;
+    background-image: url('/static/images/sprite-sheet.svg');
+    background-repeat: no-repeat;
+    transition: background-position 0.3s ease;
+}
+
+.home-icon {
+    background-position: 0 0;
+}
+.home-icon:hover {
+    background-position: 0 -64px;
+}
+
+.email-icon {
+    background-position: -64px 0;
+}
+.email-icon:hover {
+    background-position: -64px -64px;
+}
+
+.settings-icon {
+    background-position: -128px 0;
+}
+.settings-icon:hover {
+    background-position: -128px -64px;
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Exercises Section -->
         <section id="exercises" class="mb-5">
             <h2 class="mb-4">Practice Exercises</h2>
