@@ -122,7 +122,6 @@
   width: 100%;
 }
 
-
 /* Icon Link */
 .icon-link {
   text-decoration: none;
@@ -235,20 +234,36 @@
 
 /* Animation Keyframes */
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes scale {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.5); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes translate {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(100px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* Property Explorer Styles */
@@ -321,4 +336,47 @@
 
 .settings-icon:hover {
   background-position: -128px -64px;
+}
+
+/* Code Preview Container */
+.code-preview-container {
+  position: relative;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--bs-dark-bg-subtle);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.25rem;
+  color: var(--bs-light);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.copy-button.copied {
+  background-color: var(--bs-success);
+  border-color: var(--bs-success);
+}
+
+/* Interactive Sprite Preview */
+.sprite-preview {
+  display: inline-block;
+  margin: 1rem;
+  text-align: center;
+}
+
+.sprite-preview-label {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--bs-light);
+  font-size: 0.875rem;
 }
