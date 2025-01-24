@@ -64,7 +64,6 @@ This project is an educational platform that helps students learn CSS through in
 ### Prerequisites
 1. Install Git from https://git-scm.com/download/win
 2. Install Visual Studio Code from https://code.visualstudio.com/
-3. Install Python from https://www.python.org/downloads/
 
 ### Steps to Run Locally
 1. Open Command Prompt and clone the repository:

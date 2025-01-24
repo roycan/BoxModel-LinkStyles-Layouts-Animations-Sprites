@@ -1,0 +1,23 @@
+{
+  "name": "boxmodel-linkstyles-layouts-animations-sprites",
+  "version": "1.0.0",
+  "description": "css boxmodel linkstyles layouts animations and sprites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "css",
+    "boxmodel",
+    "linkstyles",
+    "layouts",
+    "animations",
+    "sprites"
+  ],
+  "author": "Roy Canseco",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
